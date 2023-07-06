@@ -175,9 +175,6 @@
     position: relative;
     margin-bottom: 8px;
     padding: 25px 0 0 25px;
-    transition-property: height;
-    transition-duration: 3s;
-    height: 100%;
 }
 
 .nav-overmenu dt {
