@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영화 그 이상의 감동, CGV</title>
+
+    <link rel="favicon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://127.0.0.1:5500/main/img/favicon.ico">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -478,41 +481,105 @@
                     <div class="event-title-wrap">
                         <h3>EVENT</h3>
                         <a href="#" class="btn-allView-event">전체보기</a>
-                        <a href="#" class="btn-event-control">playStop</a>
+                        <a href="#none" class="btn-event-control">playStop</a>
                     </div>
                     <div class="event-list-wrap">
-
+                        <div class="swiper event-list swiper-container-initialized swiper-container-horizontal">
+                            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37542/16879297562050.jpg" alt="옥수수 페스티벌">
+                                        </div>
+                                        <strong>옥水水 페스티벌</strong>
+                                        <span>2023.06.28~2023.07.24</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37648/16884326764030.jpg" alt="귀공자 맥주 상영회">
+                                        </div>
+                                        <strong>[귀공자] 불금 맥주 상영회</strong>
+                                        <span>2023.07.04~2023.07.07</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37608/16881166512860.jpg" alt="도라에몽">
+                                        </div>
+                                        <strong>[극장판 도라에몽-진구와 하늘의 유토피아] 필름마크</strong>
+                                        <span>2023.06.30~2023.07.13</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37603/16880333224450.jpg" alt="옥수수 페스티벌">
+                                        </div>
+                                        <strong>[풍재기시]필름마크</strong>
+                                        <span>2023.06.30~2023.07.13</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37604/16883456602650.jpg" alt="옥수수 페스티벌">
+                                        </div>
+                                        <strong>[보이즈어프레이드]필름마크</strong>
+                                        <span>2023.06.30~2023.07.13</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" style="width: 310.667px; margin-right: 24px;">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/37674/16886248969820.jpg" alt="미션임파서블">
+                                        </div>
+                                        <strong>[미션임파서블:데드레코닝 PART ONE]필름마크</strong>
+                                        <span>2023.07.07~2023.07.20</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next" role="button" aria-disabled="false"></div>
+                            <div class="swiper-button-prev" role="button" aria-disabled="true"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="fixedBtn-wrap">
+        <div class="fixedBtn-wrap">
             <a href="#" class="btn-fixedTicketing">예매하기</a>
-            <a href="#" class="btn-gotoTop">
+            <a href="#none" class="btn-gotoTop">
                 <img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동">
             </a>
-        </div> -->
+        </div>
 
 
         <!-- <div id="footer"></div> -->
         <footer>
-
+            <div class="bottom-wrap">
+            </div>
         </footer>
     </div>
 
     <script>
         var headerContent = document.querySelector('.header-content');
         var nav = document.querySelector('.nav');
+        var fixedBtnWrap = document.querySelector('.fixedBtn-wrap');
 
+        //fixed
         window.addEventListener('scroll', function() {
             var headerH = headerContent.offsetHeight;
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollPosition >= headerH) {
                 nav.classList.add('fixed');
+                fixedBtnWrap.classList.add('topBtn');
             } else {
                 nav.classList.remove('fixed');
+                fixedBtnWrap.classList.remove('topBtn');
             }
         });
         
@@ -520,6 +587,7 @@
         var navMenu = document.querySelector('.nav-menu');
         var navOvermenu = document.querySelectorAll('.nav-overmenu');
         
+        //sub nav
         for (var i = 0; i < navMenu.children.length; i++) {
             navMenu.children[i].firstElementChild.addEventListener('mouseenter', function() {
                 for (var j = 0; j < navOvermenu.length; j++) {
