@@ -868,3 +868,58 @@
     border-radius: 50%;
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, rgba(0, 0, 0, 0.2));
 }
+
+
+footer .bottom-wrap {
+    height: 200px;
+}
+
+footer .policy-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 23px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+footer .policy-list li a {
+    font-weight: 600;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.462em;
+}
+
+footer .policy-list li a:hover {
+    text-decoration: underline;
+}
+
+footer .company-info-wrap {
+    max-width: 980px;
+    padding: 23px 0;
+    margin: 0 auto;
+}
+
+footer .company-info-wrap .company-info {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.667em;
+}
+
+.company-info address {
+    font-style: normal;
+}
+
+.company-info .company-info-list {
+    display: flex;
+}
+
+.company-info-list dt::after {
+    content: ':';
+    padding: 0 4px;
+}
+
+.company-info-list dt:not(:first-child)::before {
+    content: '·';
+    padding: 0 8px 0 4px;
+}
