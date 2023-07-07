@@ -237,6 +237,7 @@
 
         <!-- container -->
         <div id="container">
+            <!-- video -->
             <div class="movieSelection-wrap">
                 <div class="contents">
                     <div class="video-wrap">
@@ -255,6 +256,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- movie chart -->
             <div class="movieChart-wrap">
                 <div class="contents">
                     <div class="movieChart-btn-wrap">
@@ -475,6 +478,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- event -->
             <div class="event-wrap">
                 <div class="contents">
@@ -547,6 +551,42 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 특별관 -->
+            <div class="specialHall-wrap">
+                <div class="contents">
+                    <div class="specialHall-title-wrap">
+                        <h3>특별관</h3>
+                        <a href="" class="btn-allView-special">전체보기</a>
+                    </div>
+                    <div class="specialHall-content">
+                        <div class="img-wrap">
+                            <img src="https://img.cgv.co.kr//Front/Main/2021/1209/16390080561620.png" alt="" class="active">
+                            <img src="https://img.cgv.co.kr//Front/Main/2022/0616/16553622935690.png" alt="">
+                            <img src="https://img.cgv.co.kr//Front/Main/2021/1130/16382612660240.png" alt="">
+                            <img src="https://img.cgv.co.kr//Front/Main/2021/1130/16382612660560.png" alt="">
+                        </div>
+                        <ul class="specialHall-list">
+                            <li class="active" id="0">
+                                <strong>SUITE CINEMA</strong>
+                                <span>#호텔 컨셉의 프리미엄관</span>
+                            </li>
+                            <li id="1">
+                                <strong>CINE & LIVINGROOM</strong>
+                                <span>#신개념 소셜 상영관</span>
+                            </li>
+                            <li id="2">
+                                <strong>4DX</strong>
+                                <span>#모션시트 #오감체험</span>
+                            </li>
+                            <li id="3">
+                                <strong>CINE de CHEF</strong>
+                                <span>#쉐프가 있는 영화관</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="fixedBtn-wrap">
@@ -589,48 +629,6 @@
             </article>
         </footer>
     </div>
-
-    <script>
-        var footer = document.querySelector('#footer');
-        footer.load("/footer.html");
-
-        var headerContent = document.querySelector('.header-content');
-        var nav = document.querySelector('.nav');
-        var fixedBtnWrap = document.querySelector('.fixedBtn-wrap');
-
-        //fixed
-        window.addEventListener('scroll', function() {
-            var headerH = headerContent.offsetHeight;
-            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollPosition >= headerH) {
-                nav.classList.add('fixed');
-                fixedBtnWrap.classList.add('topBtn');
-            } else {
-                nav.classList.remove('fixed');
-                fixedBtnWrap.classList.remove('topBtn');
-            }
-        });
-        
-        
-        var navMenu = document.querySelector('.nav-menu');
-        var navOvermenu = document.querySelectorAll('.nav-overmenu');
-        
-        //sub nav
-        for (var i = 0; i < navMenu.children.length; i++) {
-            navMenu.children[i].firstElementChild.addEventListener('mouseenter', function() {
-                for (var j = 0; j < navOvermenu.length; j++) {
-                    navOvermenu[j].style.display = 'block';
-                }
-            })
-        }
-        
-        nav.addEventListener('mouseleave', function() {
-            for (var j = 0; j < navOvermenu.length; j++) {
-                navOvermenu[j].style.display = 'none';
-            }
-        })
-    </script>
     <script src="main.js"></script>
 </body>
 </html>

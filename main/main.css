@@ -869,9 +869,109 @@
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, rgba(0, 0, 0, 0.2));
 }
 
+.specialHall-wrap {
+    padding: 60px 0 21px;
+}
 
+.specialHall-wrap .specialHall-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.specialHall-wrap .specialHall-title-wrap h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 26px;
+    color: #222;
+    background-image: none;
+    line-height: 1.423em;
+}
+
+.specialHall-wrap .specialHall-title-wrap .btn-allView-special {
+    padding: 4px 32px 4px 15px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_8x13.png) calc(100% - 7px) center/8px 13px scroll no-repeat;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.specialHall-wrap .specialHall-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+
+.specialHall-content .img-wrap {
+    display: block;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.specialHall-content .img-wrap img {
+    display: none;
+}
+
+.specialHall-content .img-wrap img.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0, -50%);
+}
+
+
+.specialHall-content .specialHall-list {
+    overflow: hidden;
+    width: 440px;
+}
+
+.specialHall-content .specialHall-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 25px 19px 19px;
+    border: 1px solid transparent;
+    border-top: 1px solid #e9e9e9;
+}
+
+.specialHall-content .specialHall-list li:last-child {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.specialHall-content .specialHall-list li.active {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.specialHall-content .specialHall-list li strong {
+    font-weight: 700;
+    font-size: 18px;
+    color: #222;
+    line-height: 1.444em;
+}
+
+.specialHall-content .specialHall-list li span {
+    padding: 2px 7px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.429em;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+/* footer */
 footer .bottom-wrap {
-    height: 200px;
+    height: 120px;
 }
 
 footer .policy-list {
