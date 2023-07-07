@@ -556,8 +556,6 @@
             </a>
         </div>
 
-
-        <!-- <div id="footer"></div> -->
         <footer>
             <div class="bottom-wrap"></div>
             <ul class="policy-list">
@@ -593,6 +591,9 @@
     </div>
 
     <script>
+        var footer = document.querySelector('#footer');
+        footer.load("/footer.html");
+
         var headerContent = document.querySelector('.header-content');
         var nav = document.querySelector('.nav');
         var fixedBtnWrap = document.querySelector('.fixedBtn-wrap');
